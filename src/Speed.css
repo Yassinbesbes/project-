@@ -1,0 +1,42 @@
+/* Speed.css */
+.Main {
+    border-radius: 50px;
+    border: 3px solid #5D3FA9;
+    background: #FFF;
+    height: 300px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px  auto; /* Adjusted margin for better positioning */
+}
+.x{
+    margin-top: -60px;
+}
+  
+  
+  @media screen and (min-width: 600px) {
+    .Main {
+        height: 400px;
+        width: 70%;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .Main {
+        height: 500px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Main {
+        height: 600px;
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+}
