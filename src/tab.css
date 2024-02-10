@@ -1,0 +1,57 @@
+/* tab.css */
+table {
+    margin: auto;
+    margin-top: 100px;
+    border-collapse: separate;
+    border-spacing: 10px 0px; /* Adjusted spacing for responsiveness */
+    width: 100%; /* Use 100% width for better responsiveness */
+  }
+  
+  /* ... rest of the styles */
+  
+
+th, td {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 15px; /* Adjusted padding for better spacing */
+}
+
+th {
+    border-radius: 25px 25px 0px 0px;
+    background-color: rgba(0, 203, 8, 0.70);
+    color: white; /* Ensuring text is visible on the background */
+}
+
+td {
+    border-radius: 0px 0px 25px 25px;
+    background-color: #eaeaea;
+}
+
+@media screen and (max-width: 600px) {
+    th, td {
+        width: 250px;
+        height: 50px;
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    th, td {
+        width: 250px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    table {
+        border-spacing: 20px 0px;
+    }
+    th, td {
+        width: 250px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+}

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tai+Le&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+.all{
+  margin-bottom: 5px;
+}
+img {
+  width: 100%;
+  max-width: 150px; 
+  height: auto;
+  cursor: pointer;
+  float: left;
+}
+
+p {
+  margin-top: 10px;
+  color: #5F3CC3;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  float: left;
+}
+
+
+
+
+@media screen and (min-width: 600px) {
+  p {
+    font-size: 20px; 
+  }
+  img {
+    max-width: 70px;
+    max-height: 70px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 30px; 
+  }
+  img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 50px; 
+  }
+  img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
