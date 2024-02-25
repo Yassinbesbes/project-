@@ -1,32 +1,72 @@
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Speed.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import CircleWithName from './CircleWithName';
-import Tab from './tab'
+import Button from 'react-bootstrap/Button'; // Import Button component
+import './tab.css';
+import { useNetworkSpeedTest } from '@rtbjs/network-speed-test';
 
 function Speed() {
+  const { runTest, download, upload } = useNetworkSpeedTest();
+  const [downloadSpeed, setDownloadSpeed] = useState(null);
+  const [uploadSpeed, setUploadSpeed] = useState(null);
+
+  const handleSpeedTestClick = () => {
+    runTest();
+  };
+
+  useEffect(() => {
+    if (download.isComplete) {
+      setDownloadSpeed(download.result.meanClientMbps);
+    }
+  }, [download]);
+
+  useEffect(() => {
+    if (upload.isComplete) {
+      setUploadSpeed(upload.result.meanClientMbps);
+    }
+  }, [upload]);
+
   return (
     <div className='Main'>
       <Container>
-      <Row >
-        <Col >
-          <CircleWithName
+        <Row>
+          <Col>
+            {/* Use Button component instead of CircleWithName */}
+            <button
             className="circle"
-            name="GO"
-            backgroundColor="#5F3CC3"
-            textColor="white"
-            fontSize="4vw" // Use vw unit for font size
-            circleSize="20vw" // Use vw unit for circle size
-          />
-        </Col>
+            variant="primary"
+            onClick={handleSpeedTestClick}
+          >
+            <span className="circle-text">GO</span>
+            <span className="new-circle"></span>
+          </button>
+          </Col>
         </Row>
-      <Row className='x'> 
-        <Col><Tab/></Col>
-      </Row>
-      </Container>
 
+        <Row className='x'>
+          <Col>
+            <table>
+              <thead>
+                <tr>
+                  <th>Download Speed</th>
+                  <th>Upload Speed</th>
+                  <th>Ping</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{downloadSpeed !== null ? ` ${downloadSpeed.toFixed(2)} Mbps` : '...'}</td>
+                  <td>{uploadSpeed !== null ? `${uploadSpeed.toFixed(2)} Mbps` : '...'}</td>
+                  <td>200 Mbps</td>
+                </tr>
+              </tbody>
+            </table>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

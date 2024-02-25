@@ -40,3 +40,48 @@
         margin-bottom: 50px;
     }
 }
+
+
+/* SpeedButton.css */
+/* CircleWithName.css */
+.circle {
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin: auto;
+    background-color: #5F3CC3; /* Move background color here */
+    color: white; /* Move text color here */
+    font-size: 4vw; /* Move font size here */
+    width: 20vw; /* Move circle size here */
+    height: 20vw;
+    border: none;
+  }
+  
+  .circle-text {
+    margin: 0;
+  }
+  
+  .new-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #D9D9D9;
+    animation: expand 1.5s infinite;
+    opacity: 0;
+  }
+  
+  @keyframes expand {
+    0% {
+      width: 0;
+      height: 0;
+    }
+    100% {
+      width: 110%;
+      height: 110%;
+      opacity: 1;
+    }
+  }
+  
