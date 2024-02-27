@@ -57,10 +57,10 @@ function Speed() {
               <tbody>
                 <tr>
                   <td>
-                    {downloadSpeed !== null ? ` ${downloadSpeed.toFixed(2)} Mbps` : '...'}
+                    {downloadSpeed !== null ? ` ${downloadSpeed.toFixed(2)} Mbps` : <div class="anima">...</div>}
                   </td>
                   <td >
-                    {uploadSpeed !== null ? `${uploadSpeed.toFixed(2)} Mbps` : '...'}
+                    {uploadSpeed !== null ? `${uploadSpeed.toFixed(2)} Mbps` : <div class="anima">...</div>}
                   </td>
                   <td>200 Mbps</td>
                 </tr>

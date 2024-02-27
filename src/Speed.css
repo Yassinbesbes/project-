@@ -97,6 +97,15 @@
 
 
 
+.anima {
+  animation: blink-animation 1s infinite; /* Utilisation de l'animation nommée "blink-animation" */
+}
+
+@keyframes blink-animation {
+  0% { opacity: 1; } /* Opacité à 100% au début de l'animation */
+  50% { opacity: 0; } /* Opacité à 0% à mi-chemin de l'animation */
+  100% { opacity: 1; } /* Opacité à 100% à la fin de l'animation */
+}
 
 
 
