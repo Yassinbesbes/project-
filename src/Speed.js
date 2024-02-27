@@ -4,7 +4,6 @@ import './Speed.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button'; // Import Button component
 import './tab.css';
 import { useNetworkSpeedTest } from '@rtbjs/network-speed-test';
 
@@ -34,7 +33,6 @@ function Speed() {
       <Container>
         <Row>
           <Col>
-            {/* Use Button component instead of CircleWithName */}
             <button
             className="circle"
             variant="primary"
