@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Speed.css';
+import './Speed.css'; // Ensure this CSS file exists
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -34,13 +34,13 @@ function Speed() {
         <Row>
           <Col>
             <button
-            className="circle"
-            variant="primary"
-            onClick={handleSpeedTestClick}
-          >
-            <span className="circle-text">GO</span>
-            <span className="new-circle"></span>
-          </button>
+              className="circle"
+              variant="primary"
+              onClick={handleSpeedTestClick}
+            >
+              <span className="circle-text">GO</span>
+              <span className="new-circle"></span>
+            </button>
           </Col>
         </Row>
 
@@ -56,8 +56,12 @@ function Speed() {
               </thead>
               <tbody>
                 <tr>
-                  <td>{downloadSpeed !== null ? ` ${downloadSpeed.toFixed(2)} Mbps` : '...'}</td>
-                  <td>{uploadSpeed !== null ? `${uploadSpeed.toFixed(2)} Mbps` : '...'}</td>
+                  <td>
+                    {downloadSpeed !== null ? ` ${downloadSpeed.toFixed(2)} Mbps` : '...'}
+                  </td>
+                  <td >
+                    {uploadSpeed !== null ? `${uploadSpeed.toFixed(2)} Mbps` : '...'}
+                  </td>
                   <td>200 Mbps</td>
                 </tr>
               </tbody>

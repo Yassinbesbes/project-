@@ -29,6 +29,7 @@ p {
     max-width: 70px;
     max-height: 70px;
   }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -50,3 +51,30 @@ p {
     max-height: 150px;
   }
 }
+
+
+.plus{
+  padding: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin: auto;
+  background-color: #cdc8c8c4; /* Move background color here */
+  color: rgb(0, 0, 0); /* Move text color here */
+  font-size: 2vw; /* Move font size here */
+  width: 2vw; /* Move circle size here */
+  height: 2vw;
+  border: none;
+  
+
+}
+div>h3{
+  text-align: center;
+  margin-top: -10px;
+}
+
+
+

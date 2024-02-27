@@ -26,7 +26,9 @@ function App() {
             <p>Speed connection</p>
           </Col>
           <Col xs={1}>
-
+            <div className='plus' title="Click go to test your speed connection">
+            <h3 class="Main-Text" >...</h3>
+            </div>
           </Col>
         </Row>
       
